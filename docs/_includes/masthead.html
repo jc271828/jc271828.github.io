@@ -10,7 +10,9 @@
             <span>{{ site.title | escape }}</span>
           </a>
         </h1>
-        <h3 class="site-description">{{ site.description }}</h3>
+        <h3 class="site-description" style="white-space: nowrap; margin-left: 2em;">
+          {{ site.description }}
+        </h3>
       {% else %}
         <p class="site-title">
           <a href="{{ '/' | relative_url }}">
