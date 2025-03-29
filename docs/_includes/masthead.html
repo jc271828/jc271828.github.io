@@ -3,27 +3,17 @@
 <header id="masthead">
   <div class="inner">
     <div class="title-area">
-      {% if page.url == '/' %}
-        <h1 class="site-title">
-          <a href="{{ '/' | relative_url }}">
-            {% if site.logo %}<img src="{{ site_logo }}" alt="" class="site-logo">{% endif %}
-            <span>{{ site.title | escape }}</span>
-          </a>
-        </h1>
-        <h3 class="site-description" style="white-space: nowrap; margin-left: 7em; margin-top: -1em; font-weight: normal; font-style: italic">
-          {{ site.description }}
-        </h3>
-      {% else %}
-        <p class="site-title">
-          <a href="{{ '/' | relative_url }}">
-            {% if site.logo %}<img src="{{ site_logo }}" alt="" class="site-logo">{% endif %}
-            <span>{{ site.title | escape }}</span>
-          </a>
-        </p>
-        <h3 class="site-description" style="white-space: nowrap; margin-left: 7em; margin-top: -1em; font-weight: normal; font-style: italic">
-          {{ site.description }}
-        </h3>
-      {% endif %}
+      <h1 class="site-title">
+        <a href="{{ '/' | relative_url }}">
+          {% if site.logo %}
+            <img src="{{ site_logo }}" alt="" class="site-logo">
+          {% endif %}
+          <span>{{ site.title | escape }}</span>
+        </a>
+      </h1>
+      <h3 class="site-description" style="white-space: nowrap; margin-left: 7em; margin-top: -1em; font-weight: normal; font-style: italic">
+        {{ site.description }}
+      </h3>
     </div>
   </div>
 </header>
