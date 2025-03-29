@@ -8,6 +8,8 @@
 
   <div class="inner">
     <div class="intro-text">
+      <p class="intro-subtitle">{{ site.description }}</p>
+      
       {% comment %}
       Conditionally render "Home" for the homepage.
       {% endcomment %}
@@ -16,8 +18,6 @@
       {% else %}
         <h1 id="page-title" class="intro-title">{{ page.alt_title | default: page.title | default: site.title | markdownify | strip_html }}</h1>
       {% endif %}
-
-      <p class="intro-subtitle">{{ site.description }}</p>
 
       {% if page.date %}
         {% include author %}
