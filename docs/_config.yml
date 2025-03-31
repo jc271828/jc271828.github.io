@@ -27,7 +27,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb # Comment Out if you don't want twitter to show up in the side bar
 github_username:  jc271828
-logo: /assets/website_logo_100_pixel_square_no_background.png
+logo: /assets/website_logo_100_pixel_square.png
 
 # Build settings
 remote_theme: "mmistakes/jekyll-theme-basically-basic@1.4.5"
