@@ -20,7 +20,7 @@
 
 title: JC's Code Dwelling Place
 email: jingxian-chen@outlook.com
-description: Selected coding projects in genomics, proteomics, single-cell RNA-seq, NGS, and high-throughput quantitative image analysis.
+description: Selected coding projects in genomics, proteomics, single-cell RNA-seq, NGS, high-throughput quantitative image analysis, and more!
 # description: >- # this means to ignore newlines until "baseurl:"
 #   Selected coding projects in genomics, proteomics, single-cell RNA-seq, NGS, and high-throughput quantitative image analysis.
 baseurl: "" # the subpath of your site, e.g. /blog
