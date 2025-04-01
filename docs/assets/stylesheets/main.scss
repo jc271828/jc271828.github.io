@@ -9,6 +9,14 @@
 
 @import "basically-basic";
 
+// Centers pixel moments page's intro
+.pixel-moments-intro {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 2em 0; // Optional: add vertical spacing
+}
+
+
 // Masonry container for game pic gallery
 .masonry {
     width: 90vw; // 90% of viewport width

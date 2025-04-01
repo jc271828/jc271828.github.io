@@ -4,7 +4,9 @@ title: Pixel Moments
 permalink: /pixel_moments/
 ---
 
+<div class="pixel-moments-intro">
 Welcome to **Pixel Moments** — a digital diary of my favorite in-game memories :)
+</div>
 
 <div class="masonry">
 
