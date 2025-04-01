@@ -108,7 +108,7 @@ Welcome to <span class="press-start">Pixel Moments</span> — a digital diary of
 
   <figure class="masonry-item">
     <img src="/assets/images/dzpd_1.jpg" alt="Friends!">
-    <figcaption>Me and my 10-year-old cousin gaminng together (the aesthetic is telling!😂)</figcaption>
+    <figcaption>Me and my 10-year-old cousin gaming together (the aesthetic is telling!😂)</figcaption>
   </figure>
 
   <figure class="masonry-item">
