@@ -54,7 +54,7 @@
     margin-top: 0.2em;
   }
 
-// cutomize styling for the about page
+// Cutomize styling for the about page
 .about-inner {
   display: flex;
   flex-direction: row;
@@ -68,6 +68,7 @@
   max-width: 1500px;
 }
 
+// > makes sure the styles only apply to the direct children of .about-inner
 .about-inner > div {
   font-size: 1.5em;
   flex: 1; //content grows to fill available space
