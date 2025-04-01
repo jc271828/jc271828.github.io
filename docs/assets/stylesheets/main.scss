@@ -11,7 +11,7 @@
 
 // Masonry container for game pic gallery
 .masonry {
-    column-count: 3; // Number of columns in the masonry layout
+    column-count: 5; // Number of columns in the masonry layout
     column-gap: 1em;
   }
   
@@ -23,13 +23,13 @@
   
   // Make images responsive within each masonry item
   .masonry-item img {
-    width: 100%;
+    width: 200%;
     height: auto;
   }
   
   // Style the captions to be pink
   .masonry-item figcaption {
-    font-size: 0.9em;
+    font-size: 1em;
     color: pink;
     text-align: center;
     margin-top: 0.5em;
