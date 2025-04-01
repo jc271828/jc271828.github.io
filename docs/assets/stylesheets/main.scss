@@ -74,4 +74,14 @@
   flex: 1; //content grows to fill available space
 }
 
+// Make sure site description is displayed in whole
+.site-description {
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+  max-width: 70vw;
+  margin: 0 0;
+  white-space: normal; //allow wrapping
+  word-wrap: break-word;
+}
 
