@@ -16,8 +16,12 @@
 .pixel-moments-intro {
   text-align: center;
   font-size: 3em;
-  font-family: 'Press Start 2P', monospace;
   margin: 2em 0; // Optional: add vertical spacing
+}
+
+// Press Start 2P font
+.press-start {
+  font-family: 'Press Start 2P', monospace;
 }
 
 // Masonry container for game pic gallery
