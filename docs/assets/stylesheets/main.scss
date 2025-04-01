@@ -14,8 +14,8 @@
     position: relative;
     width: 100vw; // 100% of viewport width
     left: 50%;
-    margin-left: -50vw;
-    right: 50%;
+    margin-left: 50vw;
+    right: 100%;
     margin-right: -50vw;
     column-count: 5; // Number of columns in the masonry layout
     column-gap: 1em;
