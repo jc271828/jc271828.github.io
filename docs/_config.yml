@@ -29,6 +29,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jc271828
 logo: /assets/website_logo_150_pixel_square.png
 author_picture: /assets/JC_pic.jpg
+author_name: Jingxian Chen
+author: Jingxian Chen
 
 # Build settings
 remote_theme: "mmistakes/jekyll-theme-basically-basic@1.4.5"
