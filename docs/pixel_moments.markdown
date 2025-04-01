@@ -4,7 +4,8 @@ title: Pixel Moments
 permalink: /pixel_moments/
 ---
 
-<div class="pixel-moments-intro">
+<!-- markdown="1" makes ** be interpreted as bold-formatting -->
+<div class="pixel-moments-intro" markdown="1">
 Welcome to **Pixel Moments** — a digital diary of my favorite in-game memories :)
 </div>
 
