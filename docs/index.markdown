@@ -14,3 +14,5 @@ layout: home
 <a href="https://jingxianchen.shinyapps.io/image_resizer/" target="_blank">image resizer</a> A quick gadget to resize images while keeping the aspect ratio.
 </p>
 
+<div style="height: 2em;"></div>
+
