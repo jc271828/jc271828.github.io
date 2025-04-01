@@ -59,8 +59,8 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  max-width: 90vw; // span 90% of viewport width
-  padding: 0 2em;
+  max-width: 100vw; // span 100% of viewport width
+  padding: 0 0;
   margin: 0;
   box-sizing: border-box; // include padding in width
   gap: 2em; //space between content and image
