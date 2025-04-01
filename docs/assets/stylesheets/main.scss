@@ -4,6 +4,9 @@
 
 @charset "utf-8";
 
+// Google Font Press Start 2P
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 // Theme skin
 @import "basically-basic/themes/{{ site.data.theme.skin | default: 'default' }}";
 
@@ -13,9 +16,9 @@
 .pixel-moments-intro {
   text-align: center;
   font-size: 3em;
+  font-family: 'Press Start 2P', monospace;
   margin: 2em 0; // Optional: add vertical spacing
 }
-
 
 // Masonry container for game pic gallery
 .masonry {
@@ -43,8 +46,9 @@
   // Style the captions to be pink
   .masonry-item figcaption {
     font-size: 1em;
-    color: pink;
+    font-family: 'Press Start 2P', monospace;
     text-align: center;
     margin-top: 0.2em;
   }
+
   
