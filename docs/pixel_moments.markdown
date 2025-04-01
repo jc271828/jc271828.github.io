@@ -18,7 +18,7 @@ Welcome to <span class="press-start">Pixel Moments</span> — a digital diary of
 
   <figure class="masonry-item">
     <img src="/assets/images/itt_2.png" alt="Sunbathing😎">
-    <figcaption>May and Cody sunabthing in the SNOWWWWW!❄️☀️😮</figcaption>
+    <figcaption>May and Cody sunbathing in the SNOWWWWW!❄️☀️😮</figcaption>
   </figure>
   
   <figure class="masonry-item">
@@ -33,7 +33,7 @@ Welcome to <span class="press-start">Pixel Moments</span> — a digital diary of
 
   <figure class="masonry-item">
     <img src="/assets/images/itt_5.png" alt="Ultra-explosive May💥">
-    <figcaption>Flashlight: “I don’t want to meet my maker yet!!”😭😭😭</figcaption>
+    <figcaption>Flashlight: "I don’t want to meet my maker yet!!"😭😭😭</figcaption>
   </figure>
 
   <figure class="masonry-item">
@@ -43,7 +43,7 @@ Welcome to <span class="press-start">Pixel Moments</span> — a digital diary of
   
   <figure class="masonry-item">
     <img src="/assets/images/ac_1.jpg" alt="Me in strawberry hat">
-    <figcaption>I bet the strawberry hat is SUPER comfyyyyyy!</figcaption>
+    <figcaption>I bet the strawberry hat is SUPER comfyyyyyy!🍓🍓</figcaption>
   </figure>
 
   <figure class="masonry-item">
@@ -63,7 +63,7 @@ Welcome to <span class="press-start">Pixel Moments</span> — a digital diary of
   
   <figure class="masonry-item">
     <img src="/assets/images/aco_1.jpg" alt="A warrior's homecoming (but soft)">
-    <figcaption>Sailing Adrestia back to where it all began with family by my side, I wouldn’t trade it for the world❤️.</figcaption>
+    <figcaption>Sailing Adrestia back to where it all began—with family by my side—I wouldn’t trade it for the world❤️.</figcaption>
   </figure>
 
   <figure class="masonry-item">
@@ -73,12 +73,12 @@ Welcome to <span class="press-start">Pixel Moments</span> — a digital diary of
 
   <figure class="masonry-item">
     <img src="/assets/images/aco_3.jpg" alt="Home">
-    <figcaption>I grew up within these walls. Now I'm feeling the weight of a thousand memories walking into it.</figcaption>
+    <figcaption>I grew up within these walls but now am feeling the weight of a thousand memories walking into it.</figcaption>
   </figure>
 
   <figure class="masonry-item">
     <img src="/assets/images/aco_4.jpg" alt="My family">
-    <figcaption>Me, Darius, Natakas, and our daughter—one last moment together, in front of our little home.🏠</figcaption>
+    <figcaption>Me, Darius, Natakas, and our daughter—one last time together, in front of our little home.🏠</figcaption>
   </figure>
   
   <figure class="masonry-item">
@@ -108,7 +108,7 @@ Welcome to <span class="press-start">Pixel Moments</span> — a digital diary of
 
   <figure class="masonry-item">
     <img src="/assets/images/dzpd_1.jpg" alt="Friends!">
-    <figcaption>Me and my 10-year-old cousin gaming together (the aesthetic is telling!😂)</figcaption>
+    <figcaption>Me and my 10-year-old cousin gaming together (the art style is telling!😂)</figcaption>
   </figure>
 
   <figure class="masonry-item">
@@ -142,8 +142,8 @@ Welcome to <span class="press-start">Pixel Moments</span> — a digital diary of
   </figure>
   
   <figure class="masonry-item">
-    <img src="/assets/images/sp_1.png" alt="Cutieeeee!!!😭😭😭">
-    <figcaption>Don't you dare hurt Her Majesty again!!!🐘👑💂</figcaption>
+    <img src="/assets/images/sp_1.png" alt="Cutieeeee!!!">
+    <figcaption>Don't you dare hurt Her Majesty again!!!🐘👑😭</figcaption>
   </figure>
 
   <figure class="masonry-item">
