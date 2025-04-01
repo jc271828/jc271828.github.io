@@ -65,7 +65,6 @@
   box-sizing: border-box; // include padding in width
   gap: 2em; //space between content and image
   flex-shrink: 0;
-  max-width: 1500px;
 }
 
 // > makes sure the styles only apply to the direct children of .about-inner
