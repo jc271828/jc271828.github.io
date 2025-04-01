@@ -40,24 +40,29 @@
 @import "basically-basic/print";
 
 // Masonry container for game pic gallery
-.masonry
-  column-count: 3 // Number of columns in the masonry layout
-  column-gap: 1em
+.masonry {
+  column-count: 3; // Number of columns in the masonry layout
+  column-gap: 1em;
+}
 
 // Each item in the masonry grid
-.masonry-item
-  break-inside: avoid // Prevents an item from being split between columns
-  margin-bottom: 1em
+.masonry-item {
+  break-inside: avoid; // Prevents an item from being split between columns
+  margin-bottom: 1em;
+}
 
 // Make images responsive within each masonry item
-.masonry-item img
-  width: 100%
-  height: auto
+.masonry-item img {
+  width: 100%;
+  height: auto;
+}
 
 // Style the captions to be pink
-.masonry-item figcaption
-  font-size: 0.9em
-  color: pink
-  text-align: center
-  margin-top: 0.5em
+.masonry-item figcaption {
+  font-size: 0.9em;
+  color: pink;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
 
