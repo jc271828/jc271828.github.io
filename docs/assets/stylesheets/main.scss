@@ -54,4 +54,22 @@
     margin-top: 0.2em;
   }
 
-  
+// cutomize styling for the about page
+.about-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 90vw; // span 90% of viewport width
+  padding: 0 2em;
+  margin: 0 auto;
+  box-sizing: border-box; // include padding in width
+  gap: 2em; //space between content and image
+  flex-shrink: 0;
+  max-width: 1500px;
+}
+
+.about-inner > div {
+  flex: 1; //content grows to fill available space
+}
+
+
