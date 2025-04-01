@@ -4,15 +4,11 @@ title: Pixel Moments
 permalink: /pixel_moments/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Welcome to **Pixel Moments** — a digital diary of my favorite in-game memories :)
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+<!-- You can start adding images like this -->
+![Cody and May hugging](assets/images/itt_1.png)
+*Come on May, no need to put on a straight face😉*
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+![Sackgirl dancing](assets/images/sackboy_1.png)
+*Fav-of-all-time skin of my little Sackgirl, and she's starting a dance party!*
