@@ -11,8 +11,10 @@
 
 // Masonry container for game pic gallery
 .masonry {
-    width: 100vw; // 100% of the viewport width
-    margin-left: calc(50vw - 50%); // Shifts center of the grid to the right by offsetting the parent's margin
+    position: relative;
+    width: 100vw; // 100% of viewport width
+    left: 50%;
+    margin-left: -50vw;
     column-count: 5; // Number of columns in the masonry layout
     column-gap: 1em;
   }
