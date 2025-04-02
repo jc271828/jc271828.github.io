@@ -14,5 +14,9 @@ layout: home
 <a href="https://jingxianchen.shinyapps.io/image_resizer/" target="_blank">image resizer</a> A quick gadget to resize images while keeping the aspect ratio.
 </p>
 
+<p>
+<a href="https://jingxianchen.shinyapps.io/hyphenater/" target="_blank">word hyphenater</a> A handy tool to hyphenate any number of words and de-capitalize optionally (convenient for naming script files!!).
+</p>
+
 <div style="height: 2em;"></div>
 

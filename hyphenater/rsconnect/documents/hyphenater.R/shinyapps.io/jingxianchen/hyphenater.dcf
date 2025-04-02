@@ -1,0 +1,12 @@
+name: hyphenater
+title: hyphenater
+username: jingxianchen
+account: jingxianchen
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14402884
+bundleId: 10040917
+url: https://jingxianchen.shinyapps.io/hyphenater/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
