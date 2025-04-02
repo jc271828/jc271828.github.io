@@ -7,12 +7,16 @@ categories: scRNASeq
 
 # Quick Summary
 * Built the **first transcriptional atlas** for L1 larval stage in nematode *C. elegans* using **scRNASeq**
+
 * Investigated **starvation-response** at cellular level for the first time in any animal using **scRANSeq and DE analysis**
-* Built a **web tool** for users to query their favorite gene in starvation response across cell types
+
+* Built a [Web Tool][https://jingxianchen.shinyapps.io/l1_sc/] for users to query their favorite gene in starvation response across cell types
+
 * Developed a novel **"voting" algorithm** to determine optimally extended 3' UTRome
 
 # Motivation
 Virtually all animals adapt their behaviors based on nutrient availibility changes in the environment.
+
 ![Nutrient availibility ~ behavior]({{ '/assets/images/nutrient_and_behavior.png' | relative_url }}){: style="width:auto; height:300px;" }
 
 
