@@ -19,9 +19,10 @@ Virtually all animals adjust their behavior in response to changes in nutrient a
 
 ![Nutrient availibility ~ behavior]({{ '/assets/images/nutrient_and_behavior.png' | relative_url }}){: style="width:auto; height:300px;" }
 
-But that behavior is a whole-animal outcome of cellular responses. It would be simple-minded to assume all cells respond the same way. To really understand what's happening, we need a high-resolution view of how different cell types react—and that's where **single-cell RNA-seq (scRNASeq)** comes in.
+But that behavior is a whole-animal outcome of cellular responses. It would be simple-minded to assume all cells respond the same way. To really understand what's happening, we need a high-resolution view of how different cells react—and that's where **single-cell RNA-seq (scRNASeq)** comes in.
 
 # Thought Process And Results
+## What model organism to choose?
 
 
 
