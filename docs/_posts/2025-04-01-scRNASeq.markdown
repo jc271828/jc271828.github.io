@@ -28,11 +28,11 @@ We need something whose behavior is **robustly regulated** by nutrient availabil
 Is there a biological context that's ONLY and robustly triggered by nutrient availability? Turns out yes—the first larval stage (L1) of *C. elegans*. When worms hatch with food, they become an L1; when they hatch without food, they inevitably enter [L1 arrest][l1 arrest] where no development occurs and they focus on "survival".
 
 ### scRNASeq of fed and starved L1
-As mentioned above, we sought to use scRNASeq. This accomplishes two things:
+As mentioned above, we sought to use scRNASeq. This would accomplish two things:
 
-1) So far, no transcriptional atlas exists for the L1 stage of *C. elegans*—even though there are atlases for the embryo, L2, L4, and adult stages. So our study establishes the first L1 transcriptional atlas.
+1) So far, no transcriptional atlas exists for the L1 stage of *C. elegans*—even though there are atlases for the embryo, L2, L4, and adult stages. So our study would establish the **first L1 transcriptional atlas**.
 
-2) By doing differential expression (DE) analysis for individual cell types between fed (normal) and starved (arrested) L1, we construct the first starvation-response transcriptional atlas in any animal.
+2) By doing differential expression (DE) analysis for individual cell types between fed (normal) and starved (arrested) L1, we would construct the **first starvation-response transcriptional atlas in any animal**.
 
 
 
