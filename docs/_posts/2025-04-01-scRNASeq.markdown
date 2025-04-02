@@ -7,9 +7,9 @@ categories: scRNASeq
 
 # Quick Summary
 * Built the **first transcriptional atlas** for L1 larval stage in nematode *C. elegans* using **scRNASeq**
-* Investigated **starvation-reponse** at cellular level for the first time in any animal using **scRANSeq and DE analysis**
-* Built a **web tool** for users to ask: Is my gene of interest involved in starvation response? If so, in what cells?
-* Developed a novel **"voting" algorithm** to determine an optimally extended 3' UTRome
+* Investigated **starvation-response** at cellular level for the first time in any animal using **scRANSeq and DE analysis**
+* Built a **web tool** for users to query their favorite gene in starvation response across cell types
+* Developed a novel **"voting" algorithm** to determine optimally extended 3' UTRome
 
 # Motivation
 
