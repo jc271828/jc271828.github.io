@@ -25,7 +25,7 @@ But that behavior is a whole-animal outcome of cellular responses. It would be s
 ### What model organism to choose?
 We need something whose behavior is **robustly regulated** by nutrient availibility changes. The first thing that came into mind was the [dauer][dauer] stage of *C. elegans*, which is triggered when worms are short of food. **However**, dauer is triggered by some other cues as well, like high temperature and overcrowed poopulation, which might very likely confound their response to purely "nutrient availibility".
 
-Is there a biological context that's ONLY and rosbustly triggered by nutrient availibility? Turns out yes—the first larval stage (L1) of *C. elegans*. When worms hatch with food, they become an L1; when they hatch without food, they inevitably enter "L1 arrest", where no development occurs and they focus on "survival".
+Is there a biological context that's ONLY and rosbustly triggered by nutrient availibility? Turns out yes—the first larval stage (L1) of *C. elegans*. When worms hatch with food, they become an L1; when they hatch without food, they inevitably enter [L1 arrest][l1 arrest] where no development occurs and they focus on "survival".
 
 ### scRNASeq of fed and starved L1
 
@@ -79,6 +79,6 @@ greet("Alice");
 echo "Hello, world!"
 {% endhighlight %}
 
-
+[l1 arrest]: https://pubmed.ncbi.nlm.nih.gov/23824969/
 [dauer]: https://www.ncbi.nlm.nih.gov/books/NBK116082/
 [l1_sc]: https://jingxianchen.shinyapps.io/l1_sc/
