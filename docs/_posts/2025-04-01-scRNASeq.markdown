@@ -6,7 +6,7 @@ categories: scRNASeq
 ---
 
 # Tools Used in This Project
-Python · R · Bash · Seurat · Conda · HPC · Conda · 10x Genomics · Next-generation Sequencing (NGS) · Motif Discovery and Enrichment Analysis · Gene Set Enrichment Analysis (GSEA) · Gene Ontology (GO) Analysis · Pathway and Network Analysis · Multiple Sequence Alignment (MSA) · NCBI · GEO · UCSC Genome Browser · 
+Python · R · Bash · Seurat · Conda · HPC · Conda · 10x Genomics · Next-generation Sequencing (NGS) · Motif Discovery and Enrichment Analysis · Gene Set Enrichment Analysis (GSEA) · Gene Ontology (GO) Analysis · Pathway and Network Analysis · Multiple Sequence Alignment (MSA) · NCBI · GEO · UCSC Genome Browser · Ensembl · ENCODE
 
 
 
