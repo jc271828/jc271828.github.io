@@ -8,7 +8,7 @@ layout: default
   <div class="inner home-inner">
     <article class="entry-wrap">
       <div class="entry-content">
-        {{ content }}
+        {{ % include toc.html html=content % }}
       </div>
       {% if site.disqus.shortname %}
         {% include disqus_comments.html %}
