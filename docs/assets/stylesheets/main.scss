@@ -140,7 +140,7 @@
   opacity: 1;
 }
 
-// Prevent images from being distorted on narrow screens
+// Prevent images from being distorted on narrow screens or being too large on wide screens
 img {
   max-width: 600px;
   height: auto;
