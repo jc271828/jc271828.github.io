@@ -130,11 +130,13 @@
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
-  z-index: 1000; /* ensures it appears above other elements */
+  z-index: 1000; /* keep it above other elements */
   opacity: 0.7;
   transition: opacity 0.3s;
+  display: inline-block; /* make sure it's displayed */
 }
 
 .go-to-top:hover {
   opacity: 1;
 }
+
