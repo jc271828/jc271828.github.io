@@ -6,10 +6,7 @@ categories: scRNASeq
 ---
 
 # Tools Used in This Project
-Python · R · Bash · Seurat · Conda · HPC · Conda · 10x Genomics · Next-generation Sequencing (NGS) · Motif Discovery and Enrichment Analysis · Gene Set Enrichment Analysis (GSEA) · Gene Ontology (GO) Analysis · Pathway and Network Analysis · Multiple Sequence Alignment (MSA) · NCBI · GEO · UCSC Genome Browser · Ensembl · ENCODE
-
-
-
+Python · R · Bash · Seurat · Git · HPC · Conda · MEME Suite · 10x Genomics · Next-generation Sequencing (NGS) · Motif Discovery and Enrichment Analysis · Gene Set Enrichment Analysis (GSEA) · Gene Ontology (GO) Analysis · Pathway and Network Analysis · Multiple Sequence Alignment (MSA) · NCBI · GEO · UCSC Genome Browser · Ensembl · ENCODE
 
 # Quick Summary
 * Built the **first transcriptional atlas** for L1 larval stage in nematode *C. elegans* using **scRNASeq**
@@ -39,6 +36,16 @@ As mentioned above, we sought to use scRNASeq. This would accomplish two things:
 1) So far, no transcriptional atlas exists for the L1 stage of *C. elegans*—even though there are atlases for the embryo, L2, L4, and adult stages. So our study would establish the **first L1 transcriptional atlas**.
 
 2) By doing differential expression (DE) analysis for individual cell types between fed (normal) and starved (arrested) L1, we would construct the **first starvation-response transcriptional atlas in any animal**.
+
+Big shoutout to our awesome technician, who spared me from the joys of cell dissociation and library prep😉, so I could stay focused on the bioinformatics side.
+
+### NGS part of our scRNASeq
+We used the 10x Genomics' Gel beads-in-EMulsion (GEM) technology
+
+![GEM]({{ '/assets/images/tenx.png' | relative_url }}){: style="width:auto; height:300px;" }
+
+
+
 
 
 
