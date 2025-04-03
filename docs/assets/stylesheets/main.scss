@@ -124,7 +124,7 @@
 .go-to-top {
   position: fixed;
   bottom: 5vw;
-  right: 15vw;
+  right:10vw;
   background-color: #007bff;
   color: #fff;
   padding: 10px 15px;
@@ -142,6 +142,6 @@
 
 // Prevent images from being distorted on narrow screens or being too large on wide screens
 img {
-  max-width: 600px;
+  max-width: min(90vw, 600px);
   height: auto;
 }
