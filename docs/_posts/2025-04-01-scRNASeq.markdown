@@ -46,12 +46,9 @@ We used the 10x Genomics' Gel bead-in-EMulsion (GEM) technology.
 
 Basically, this technology tries to make sure that no more than 1 cell is captured per GEM (so you would expect a lot of empty GEMs but very rare multiplet GEMs). The cell is lysed within the GEM and its cellular transcripts are released into the GEM. This technology tries to only capture mRNAs by using a poly-T sequence to recognize mRNA's poly-A tail (apparently this recognition isn't perfect, as we later found that it also recognized a lot of AT-rich non-mRNAs). All the recognizer sequence within the same GEM have the same barcode but each has a Unique Molecular Identifier (UMI). So ideally, because each GEM only contains zero or one cell, when it does contain a cell, **all mRNAs in this GEM coem from the same cell and have the same barcode, but each of them has a different UMI**. This is important, as it forms the basis of 1) how we distinguish transcripts from the same cell, and 2) how we count transcript abundance.
 
-Instead of using 10x Genomics' CellRanger pipeline align and count reads, we used the COPILOT[copilot] pipeline, which adds cutomization functionality to the [kallisto | bustools][kb] workflow that's designed to preprocess scRNASeq data. Using COPILOT has two advantages over using CellRanger:
-* We can now output spliced AND unspliced reads from the workflow. And it would be intriguing to be able to detect unspliced reads as they represent nascent transcripts and active transcription, in contrast to mature, processed mRNA. And this, in turn, is important because the **transcript abundance is made up by active transcription - decay** so an increase in transcript abundance doesn't necessarily mean it is transcribed more—it can simply be because the transcript is degraded less.
+Instead of using 10x Genomics' CellRanger pipeline align and count reads, we used the scKB[sckb] pipeline, which adds customization functionality to the [kallisto | bustools][kb] workflow that's designed to preprocess scRNASeq data. This is better than using CellRanger because We can now output **spliced AND unspliced** reads from the workflow. And it is always intriguing to be able to detect unspliced reads as they represent nascent transcripts and active transcription, in contrast to mature, processed mRNA. And this, in turn, is important because the **transcript abundance is made up by active transcription - decay**. So an increase in transcript abundance doesn't necessarily mean it is transcribed more—it can simply be because the transcript is degraded less.
 
-* We can use a specific set of genes to **censor low-quality/dying cells**, and in our case, we chose to use mitochondrial genes, as it is known that when cells are dying, their mitochondrial content is released and mitochondrial gene proportion goes up in GEMs.
-
-To achieve the first goal, we need to map reads! And to be able to get unspliced/intronic reads, we need to give the pipeline an intronic genome annotation file. And to do *that*, we need to index introns! Okay! Let's do it!
+Okay! So to be able to get unspliced/intronic reads, we need to give scKB an intronic genome annotation file. And to do *that*, we need to index introns! Let's do it!
 
 {% highlight r %}
 # load libs
@@ -62,8 +59,24 @@ library(BUSpaRse)
 # intron-indexing needs a file telling it whether each chromosome is circular or not
 cir_or_not <- setNames(c(rep(FALSE, 6), TRUE), c("I", "II", "III", "IV", "V", "X", "MtDNA"))
 
-# generate the intronic index file
+# extracts intronic sequences flanked by L-1 bases of exonic sequences (L equals 91 in the v3 generation of 10x scRNASeq technology)
 get_velocity_files(X = "./ws286.gtf", L = 91, Genome = BSgenome.Celegans.WS286, out_path = "./", isoform_action = "collapse", chrs_only= TRUE, is_circular = cir_or_not, style="Ensembl")
+{% endhighlight %}
+
+Now we have some files generated in the output directory that we designated. Let's use them to index introns!
+
+{% highlight bash %}
+#!/bin/bash
+# cDNA_introns_10xv3.idx is the name of the generated index file; cDNA_introns.fa was generated in the last step
+kallisto index -i cDNA_introns_10xv3.idx cDNA_introns.fa
+{% endhighlight %}
+
+Now that we have the intronic info in hand, we'll start read-mapping!!
+
+{% highlight bash %}
+#!/bin/bash
+# 10xv3_whitelist.txt includes all the valid barcode in v3 generation of 10x Genomics scRNASeq technology and can be found [here][whitelist]
+scKB –file ./ -index ./cDNA_introns_10xv3.idx -dir_intermediate ./ -supported_tech 10xv3 -thread 16 -whitelist ./10xv3_whitelist.txt -dir_final ./
 {% endhighlight %}
 
 
@@ -71,6 +84,12 @@ get_velocity_files(X = "./ws286.gtf", L = 91, Genome = BSgenome.Celegans.WS286, 
 
 
 
+
+
+
+
+
+* We can use a specific set of genes to **censor low-quality/dying cells**, and in our case, we chose to use mitochondrial genes, as it is known that when cells are dying, their mitochondrial content is released and mitochondrial gene proportion goes up in GEMs.
 
 
 
@@ -129,7 +148,8 @@ greet("Alice");
 echo "Hello, world!"
 {% endhighlight %}
 
-
+[whitelist]: https://github.com/BUStools/getting_started/releases/download/species_mixing/10xv3_whitelist.txt
+[sckb]: https://github.com/Hsu-Che-Wei/scKB
 [bsgenome_seed]: https://github.com/jc271828/jc271828.github.io/tree/gh-pages/docs/assets/seed_for_BSgenome
 [copilot]: https://github.com/ohlerlab/COPILOT
 [kb]: https://www.kallistobus.tools/
