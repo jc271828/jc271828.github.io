@@ -5,6 +5,8 @@ date:   2025-04-01 09:00:00 -0400
 categories: scRNASeq
 ---
 
+{% include toc.html content=page.content skip_toc=page.skip_toc%}
+
 # Tools Used in This Project
 Python · R · Bash · Seurat · Git · HPC · Conda · MEME Suite · 10x Genomics · Next-generation Sequencing (NGS) · Motif Discovery and Enrichment Analysis · Gene Set Enrichment Analysis (GSEA) · Gene Ontology (GO) Analysis · Pathway and Network Analysis · Multiple Sequence Alignment (MSA) · NCBI · GEO · UCSC Genome Browser · Ensembl · ENCODE
 
