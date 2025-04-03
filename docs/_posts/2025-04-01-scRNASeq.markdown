@@ -23,7 +23,7 @@ Python · R · Bash · Seurat · Git · HPC · Conda · MEME Suite · 10x Genomi
 # Motivation
   Virtually all animals adjust their behavior in response to changes in nutrient availability.
 
-![Nutrient availability ~ behavior]({{ '/assets/images/nutrient_and_behavior.png' | relative_url }}){: style="width:auto; height:300px;" }
+![Nutrient availability ~ behavior]({{ '/assets/images/nutrient_and_behavior.png' | relative_url }})
 
 But that behavior is a whole-animal outcome of cellular responses. It would be simple-minded to assume all cells respond the same way. To really understand what's happening, we need a high-resolution view of how different cells react—and that's where **single-cell RNA-seq (scRNASeq)** comes in.
 
@@ -45,7 +45,7 @@ Big shoutout to our awesome technician, who spared me from the joys of cell diss
 ### De-multiplexing NGS data of scRNASeq
 We used the 10x Genomics' Gel bead-in-EMulsion (GEM) technology.
 
-![GEM]({{ '/assets/images/tenx.png' | relative_url }}){: style="width:auto; height:300px;" }
+![GEM]({{ '/assets/images/tenx.png' | relative_url }})
 
 Basically, this technology tries to make sure that no more than 1 cell is captured per GEM (so you would expect a lot of empty GEMs but very rare multiplet GEMs). The cell is lysed within the GEM and its cellular transcripts are released into the GEM. This technology tries to only capture mRNAs by using a poly-T sequence to recognize mRNA's poly-A tail (apparently this recognition isn't perfect, as we later found that it also recognized a lot of AT-rich non-mRNAs). All the recognizer sequence within the same GEM have the same barcode but each has a Unique Molecular Identifier (UMI). So ideally, because each GEM only contains zero or one cell, when it does contain a cell, **all mRNAs in this GEM coem from the same cell and have the same barcode, but each of them has a different UMI**. This is important, as it forms the basis of 1) how we distinguish transcripts from the same cell, and 2) how we count transcript abundance.
 
