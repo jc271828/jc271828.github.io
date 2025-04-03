@@ -142,6 +142,6 @@
 
 // Prevent images from being distorted on narrow screens or being too large on wide screens
 img {
-  max-width: min(90vw, 600px);
+  max-width: min(80vw, 600px);
   height: auto;
 }
