@@ -122,7 +122,7 @@
 
 // Adding a "Go to Top" button
 .go-to-top {
-  position: fixed;
+  position: absolute;
   bottom: 20px;
   right: 20px;
   background-color: #007bff;
@@ -130,32 +130,12 @@
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
-  z-index: 1000; /* keep it above other elements */
+  z-index: 1000; // keep it above other elements
   opacity: 0.7;
   transition: opacity 0.3s;
-  display: inline-block; /* make sure it's displayed */
+  display: inline-block; // make sure it's displayed
 }
 
 .go-to-top:hover {
   opacity: 1;
-}
-
-/* Style the button */
-.top-link {
-  transition:       all .25s ease-in-out;
-  position:         fixed;
-  bottom:           0;
-  right:            0;
-  display:          inline-flex;
-  color:            #000000;
-
-  cursor:           pointer;
-  align-items:      center;
-  justify-content:  center;
-  margin:           0 2em 2em 0;
-  border-radius:    50%;
-  padding:          .25em;
-  width:            1em;
-  height:           1em;
-  background-color: #F8F8F8;
 }
