@@ -39,7 +39,7 @@ As mentioned above, we sought to use scRNASeq. This would accomplish two things:
 
 Big shoutout to our awesome technician, who spared me from the joys of cell dissociation and library prep😉, so I could stay focused on the bioinformatics side.
 
-### NGS of our scRNASeq
+### De-multiplexing NGS data of scRNASeq
 We used the 10x Genomics' Gel bead-in-EMulsion (GEM) technology.
 
 ![GEM]({{ '/assets/images/tenx.png' | relative_url }}){: style="width:auto; height:300px;" }
@@ -50,6 +50,14 @@ Instead of using 10x Genomics' CellRanger pipeline align and count reads, we use
 * We can now output spliced AND unspliced reads from the workflow. And it would be intriguing to be able to detect unspliced reads as they represent nascent transcripts and active transcription, in contrast to mature, processed mRNA. And this, in turn, is important because the **transcript abundance is made up by active transcription - decay** so an increase in transcript abundance doesn't necessarily mean it is transcribed more—it can simply be because the transcript is degraded less.
 
 * We can use a specific set of genes to **censor low-quality/dying cells**, and in our case, we chose to use mitochondrial genes, as it is known that when cells are dying, their mitochondrial content is released and mitochondrial gene proportion goes up in GEMs.
+
+To achieve the first goal, we need to map reads! And to be able to get unspliced/intronic reads, we need to give the pipeline an intronic genome annotation file. We need to index introns! Let's do it!
+
+{% highlight bash %}
+#!/bin/bash
+# First, build your customized genome as a BSgenome package
+echo "Hello, world!"
+{% endhighlight %}
 
 
 

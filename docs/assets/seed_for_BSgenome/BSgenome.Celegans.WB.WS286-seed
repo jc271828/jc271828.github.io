@@ -1,0 +1,18 @@
+Package: BSgenome.Celegans.WB.WS286
+Title: Full genome sequences for Caenorhabditis elegans (WB version WS286)
+Description: Full genome sequences for Caenorhabditis elegans (Worm) as provided by WB (WS286, Aug. 2022) and stored in Biostrings objects.
+Version: 2023.3.14
+Suggests: GenomicFeatures
+organism: Caenorhabditis elegans
+common_name: Worm
+provider: WB
+genome: WS286
+release_date: Aug. 2022
+source_url: ftp.wormbase.org/pub/wormbase/releases/WS286/species/c_elegans/PRJNA13758/c_elegans.PRJNA13758.WS286.genomic.fa.gz
+organism_biocview: Caenorhabditis_elegans
+BSgenomeObjname: Celegans
+seqnames: c("I", "II", "III", "IV", "V", "X", "MtDNA")
+circ_seqs: "MtDNA"
+SrcDataFiles: fa.gz from ftp.wormbase.org/pub/wormbase/releases/WS286/species/c_elegans/PRJNA13758/c_elegans.PRJNA13758.WS286.genomic.fa.gz
+PkgExamples: genome$I  # same as genome[["I"]]
+seqs_srcdir: /work/jc750/ref_genome/WS286/seq_for_BSgenome
