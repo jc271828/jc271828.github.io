@@ -51,12 +51,19 @@ Instead of using 10x Genomics' CellRanger pipeline align and count reads, we use
 
 * We can use a specific set of genes to **censor low-quality/dying cells**, and in our case, we chose to use mitochondrial genes, as it is known that when cells are dying, their mitochondrial content is released and mitochondrial gene proportion goes up in GEMs.
 
-To achieve the first goal, we need to map reads! And to be able to get unspliced/intronic reads, we need to give the pipeline an intronic genome annotation file. We need to index introns! Let's do it!
+To achieve the first goal, we need to map reads! And to be able to get unspliced/intronic reads, we need to give the pipeline an intronic genome annotation file. And to do *that*, we need to index introns! Okay! Let's do it!
 
-{% highlight bash %}
-#!/bin/bash
-# First, build your customized genome as a BSgenome package
-echo "Hello, world!"
+{% highlight r %}
+# load libs
+library(BSgenome)
+library(BSgenome.Celegans.WB.WS286) # a customized BSgenome, seed used to forge this genome can be found [here][bsgenome_seed]
+library(BUSpaRse)
+
+# intron-indexing needs a file telling it whether each chromosome is circular or not
+cir_or_not <- setNames(c(rep(FALSE, 6), TRUE), c("I", "II", "III", "IV", "V", "X", "MtDNA"))
+
+# generate the intronic index file
+get_velocity_files(X = "./ws286.gtf", L = 91, Genome = BSgenome.Celegans.WS286, out_path = "./", isoform_action = "collapse", chrs_only= TRUE, is_circular = cir_or_not, style="Ensembl")
 {% endhighlight %}
 
 
@@ -123,7 +130,7 @@ echo "Hello, world!"
 {% endhighlight %}
 
 
-
+[bsgenome_seed]: https://github.com/jc271828/jc271828.github.io/tree/gh-pages/docs/assets/seed_for_BSgenome
 [copilot]: https://github.com/ohlerlab/COPILOT
 [kb]: https://www.kallistobus.tools/
 [l1 arrest]: https://pubmed.ncbi.nlm.nih.gov/23824969/
