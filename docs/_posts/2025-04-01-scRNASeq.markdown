@@ -111,7 +111,7 @@ copilot(sample.name = "fed_starved_l1",
          min.UMI.high.quality = 25)
 {% endhighlight %}
 
-**OKAY!! What do we have now? We have gene by cell matrices for all, spliced, and unspliced reads in cells that passed the filter—"high-quality" cells! Cells we can trust! Let's move on to make better use of these matrices—let's Seurat them!**
+**OKAY!! What do we have now? We have gene by cell matrices for all, spliced, and unspliced reads in cells that passed the filter—Cells we can trust! Let's move on to make better use of these matrices—let's Seurat them!**
 
 ### Clustering and annotating cells
 
