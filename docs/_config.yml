@@ -32,6 +32,7 @@ logo: /assets/website_logo_150_pixel_square.png
 # Build settings
 remote_theme: "mmistakes/jekyll-theme-basically-basic@1.4.5"
 plugins:
+  - jekyll-toc
   # - jekyll-feed # Comment out if you don't want the subscribe button to show up in the side bar
 
 # Exclude from processing.

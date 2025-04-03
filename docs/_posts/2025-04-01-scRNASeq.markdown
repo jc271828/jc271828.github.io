@@ -3,6 +3,7 @@ layout: post
 title:  "Dissecting Starvation Responses with Single-Cell RNA-Seq: From Cell-Type-Specific to Global Regulations"
 date:   2025-04-01 09:00:00 -0400
 categories: scRNASeq
+toc: true
 ---
 
 # Tools Used in This Project
