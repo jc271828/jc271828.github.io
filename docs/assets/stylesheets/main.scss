@@ -120,15 +120,22 @@
   display: inline-block;
 }
 
+// Adding a "Go to Top" button
 .go-to-top {
-  opacity: 0;
-  pointer-events: none;
-  /* 其他样式，如定位、过渡效果等 */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  z-index: 1000; // keep it above other elements
+  opacity: 0.7;
   transition: opacity 0.3s;
+  display: inline-block; // make sure it's displayed
 }
 
-.go-to-top.visible {
+.go-to-top:hover {
   opacity: 1;
-  pointer-events: auto;
 }
-

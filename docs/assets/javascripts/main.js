@@ -75,19 +75,3 @@ function toggleClassSearch() {
   }, 400);
 }
 
-// 获取回到顶部按钮
-var goTopButton = document.querySelector('.go-to-top');
-
-// 定义一个函数，用来根据滚动位置切换按钮的可见性
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        goTopButton.classList.add('visible');
-    } else {
-        goTopButton.classList.remove('visible');
-    }
-}
-
-// 在window对象上监听scroll事件
-window.onscroll = function() {
-    scrollFunction();
-};
