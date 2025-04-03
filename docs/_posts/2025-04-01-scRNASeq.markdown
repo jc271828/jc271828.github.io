@@ -46,14 +46,15 @@ We used the 10x Genomics' Gel bead-in-EMulsion (GEM) technology.
 
 Basically, this technology tries to make sure that no more than 1 cell is captured per GEM (so you would expect a lot of empty GEMs but very rare multiplet GEMs). The cell is lysed within the GEM and its cellular transcripts are released into the GEM. This technology tries to only capture mRNAs by using a poly-T sequence to recognize mRNA's poly-A tail (apparently this recognition isn't perfect, as we later found that it also recognized a lot of AT-rich non-mRNAs). All the recognizer sequence within the same GEM have the same barcode but each has a Unique Molecular Identifier (UMI). So ideally, because each GEM only contains zero or one cell, when it does contain a cell, **all mRNAs in this GEM coem from the same cell and have the same barcode, but each of them has a different UMI**. This is important, as it forms the basis of 1) how we distinguish transcripts from the same cell, and 2) how we count transcript abundance.
 
-Instead of using 10x Genomics' CellRanger pipeline align and count reads, we used the [scKB][sckb] pipeline, which adds customization functionality to the [kallisto bustools][kb] workflow that's designed to preprocess scRNASeq data. This is better than using CellRanger because We can now output **spliced AND unspliced** reads from the workflow. And it is always intriguing to be able to detect unspliced reads as they represent nascent transcripts and active transcription, in contrast to mature, processed mRNA. And this, in turn, is important because the **transcript abundance is made up by active transcription - decay**. So an increase in transcript abundance doesn't necessarily mean it is transcribed more—it can simply be because the transcript is degraded less.
+Instead of using 10x Genomics' CellRanger pipeline to align and count reads, we used the [scKB][sckb] pipeline, which adds customization functionality to the [kallisto bustools][kb] workflow that's designed to preprocess scRNASeq data. This is better than using CellRanger because we can now output **spliced AND unspliced** reads from the workflow. And it is always intriguing to be able to detect unspliced reads as they represent nascent transcripts, in contrast to mature, processed mRNA. And this, in turn, is important because the **transcript abundance is made up by active transcription - decay**. So an increase in transcript abundance doesn't necessarily mean it is transcribed more—it can simply be because the transcript is degraded less.
 
 Okay! So to be able to get unspliced/intronic reads, we need to give scKB an intronic genome annotation file. And to do *that*, we need to index introns! Let's do it!
 
+BSgenome.Celegans.WB.WS286 is a customized BSgenome; seed used to forge it can be found [here][bsgenome_seed]
 {% highlight r %}
 # load libs
 library(BSgenome)
-library(BSgenome.Celegans.WB.WS286) # a customized BSgenome, seed used to forge this genome can be found [here][bsgenome_seed]
+library(BSgenome.Celegans.WB.WS286)
 library(BUSpaRse)
 
 # intron-indexing needs a file telling it whether each chromosome is circular or not
@@ -63,7 +64,7 @@ cir_or_not <- setNames(c(rep(FALSE, 6), TRUE), c("I", "II", "III", "IV", "V", "X
 get_velocity_files(X = "./ws286.gtf", L = 91, Genome = BSgenome.Celegans.WS286, out_path = "./", isoform_action = "collapse", chrs_only= TRUE, is_circular = cir_or_not, style="Ensembl")
 {% endhighlight %}
 
-Now we have some files generated in the output directory that we designated. Let's use them to index introns!
+Now we have some files generated in the output directory. Let's use them to index introns!
 
 {% highlight bash %}
 #!/bin/bash
@@ -73,9 +74,9 @@ kallisto index -i cDNA_introns_10xv3.idx cDNA_introns.fa
 
 Now that we have the intronic info in hand, we'll start read-mapping!!
 
+10xv3_whitelist.txt includes all the valid barcode in v3 generation of 10x Genomics scRNASeq technology and can be found [here][whitelist]
 {% highlight bash %}
 #!/bin/bash
-# 10xv3_whitelist.txt includes all the valid barcode in v3 generation of 10x Genomics scRNASeq technology and can be found [here][whitelist]
 scKB –file ./ -index ./cDNA_introns_10xv3.idx -dir_intermediate ./ -supported_tech 10xv3 -thread 16 -whitelist ./10xv3_whitelist.txt -dir_final ./
 {% endhighlight %}
 
