@@ -87,26 +87,26 @@
   word-wrap: break-word;
 }
 
-// Cutomize styling for the Home page
+// Customize styling for the Home page
 .home-inner {
   max-width: 90vw; // span 90% of viewport width
   margin: 0;
   box-sizing: border-box; // include padding in width
 }
 
-// Cutomize styling for the masthead
+// Customize styling for the masthead
 .head-inner {
   max-width: 80vw; // span 80% of viewport width
   margin: 0;
   box-sizing: border-box; // include padding in width
 }
 
+// Toc credit to https://stackoverflow.com/questions/9602936/how-to-create-a-table-of-contents-to-jekyll-blog-post
 // Adding 'Contents' headline to the TOC
 #markdown-toc::before {
   content: "Contents";
   font-weight: bold;
 }
-
 
 // Using numbers instead of bullets for listing
 #markdown-toc ul {
