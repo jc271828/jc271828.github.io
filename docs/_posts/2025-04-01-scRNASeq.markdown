@@ -79,6 +79,8 @@ Now that we have the intronic info in hand, we'll start read-mapping!!
 scKB –file ./ -index ./cDNA_introns_10xv3.idx -dir_intermediate ./ -supported_tech 10xv3 -thread 16 -whitelist ./10xv3_whitelist.txt -dir_final ./
 {% endhighlight %}
 
+**Now we have our precious gene by cell matrix for all, spliced, AND unspliced read counts!!**
+
 
 
 
