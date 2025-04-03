@@ -74,7 +74,7 @@ kallisto index -i cDNA_introns_10xv3.idx cDNA_introns.fa
 
 Now that we have the intronic info in hand, we'll start read-mapping!!
 
-10xv3_whitelist.txt includes all the valid barcode in v3 generation of 10x Genomics scRNASeq technology and can be found [here][whitelist]
+10xv3_whitelist.txt includes all valid barcodes in v3 generation of 10x Genomics scRNASeq technology and can be found [here][whitelist]
 {% highlight bash %}
 #!/bin/bash
 scKB –file ./ -index ./cDNA_introns_10xv3.idx -dir_intermediate ./ -supported_tech 10xv3 -thread 16 -whitelist ./10xv3_whitelist.txt -dir_final ./
@@ -82,17 +82,37 @@ scKB –file ./ -index ./cDNA_introns_10xv3.idx -dir_intermediate ./ -supported_
 
 **Now we have our precious gene by cell matrix for all, spliced, AND unspliced read counts!!**
 
+However, we can't keep all the cells in the matrix, as some of them are low-quality (e.g., **dying cells**). We need to censor some of them!
+
+We can use a specific set of genes to **define low-quality**, and in our case, we chose mitochondrial genes, as it is known that when cells are dying, their mitochondrial content is released and mitochondrial gene proportion goes up in GEMs.
+
+We used the [COPILOT][copilot] pipeline to iteratively classify cells into high- and low-quality groups until the result converges. below is an example code snippet.
+
+Note: COPILOT censors cells dynamically. More specifically, here, it censors cells with a high mitochondrial transcript proportion, it removes multiplets using the [DoubletFinder][doublet] package, and it also censors cells based on a minimum UMI number for low- and high-quality cells and removes cells whose UMI count corresponds to the top 1% in all cells.
+{% highlight r %}
+# load libs
+library(tidyverse)
+library(magrittr)
+library(COPILOT)
+
+# get all mitochondrial genes into a vector
+mt_genes <- read_tsv("ws286_mt_genes.txt", col_names = F) %>% .$X1
+
+# dynamically censors cells
+copilot(sample.name = "fed_starved_l1",
+         species.name = "Caenorhabditis elegans",
+         transcriptome.name = "ws286.gtf",
+         mt.pattern = mt_genes,
+         remove.doublet = TRUE,
+         mt.threshold = 20,
+         filtering.ratio = 1,
+         top.percent = 1,
+         min.UMI.low.quality = 10,
+         min.UMI.high.quality = 25)
+{% endhighlight %}
 
 
 
-
-
-
-
-
-
-
-* We can use a specific set of genes to **censor low-quality/dying cells**, and in our case, we chose to use mitochondrial genes, as it is known that when cells are dying, their mitochondrial content is released and mitochondrial gene proportion goes up in GEMs.
 
 
 
@@ -151,7 +171,9 @@ greet("Alice");
 echo "Hello, world!"
 {% endhighlight %}
 
-[whitelist]: https://github.com/BUStools/getting_started/releases/download/species_mixing/10xv3_whitelist.txt
+
+[doublet]: https://github.com/chris-mcginnis-ucsf/DoubletFinder
+[whitelist]: https://github.com/BUStools/getting_started/releases
 [sckb]: https://github.com/Hsu-Che-Wei/scKB
 [bsgenome_seed]: https://github.com/jc271828/jc271828.github.io/tree/gh-pages/docs/assets/seed_for_BSgenome
 [copilot]: https://github.com/ohlerlab/COPILOT
