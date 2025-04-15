@@ -7,15 +7,19 @@ layout: home
 
 <h2 style="font-weight: bold;">Web Tools</h2>
 <p>
-<a href="https://jingxianchen.shinyapps.io/l1_sc/" target="_blank">query scRNASeq</a> Is your gene of interest differentially expressed when nutrient availability changes? If so, in what cell types? Using data that I generated, annotated, and analyzed.
+<a href="https://jingxianchen.shinyapps.io/l1_sc/" target="_blank">Query scRNASeq</a> Is your gene of interest differentially expressed when nutrient availability changes? If so, in what cell types? Using data that I generated, annotated, and analyzed.
 </p>
 
 <p>
-<a href="https://jingxianchen.shinyapps.io/image_resizer/" target="_blank">image resizer</a> A quick gadget to resize images while keeping the aspect ratio.
+<a href="https://jingxianchen.shinyapps.io/image_resizer/" target="_blank">Image Resizer</a> A quick gadget to resize images while keeping the aspect ratio.
 </p>
 
 <p>
-<a href="https://jingxianchen.shinyapps.io/hyphenater/" target="_blank">word hyphenater</a> A handy tool to hyphenate any number of words and de-capitalize optionally (convenient for naming script files!!).
+<a href="https://jingxianchen.shinyapps.io/hyphenater/" target="_blank">Word Hyphenater</a> A handy tool to hyphenate any number of words and de-capitalize optionally (convenient for naming script files!!).
+</p>
+
+<p>
+<a href="https://jingxianchen.shinyapps.io/hangul_flashcards/" target="_blank">Hangul Flashcards</a> Designed for beginner Korean learners like me, this app helps you memorize basic words and practice pronunciation.
 </p>
 
 <div style="height: 2em;"></div>
