@@ -1,0 +1,12 @@
+name: hangul_flashcards
+title: hangul_flashcards
+username: jingxianchen
+account: jingxianchen
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14522999
+bundleId: 10115406
+url: https://jingxianchen.shinyapps.io/hangul_flashcards/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
